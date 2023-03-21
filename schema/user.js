@@ -14,8 +14,13 @@ const userSchema = new mongoose.Schema({
         type: Boolean,
         default: false,
     },
+    postulant: {
+        type: Boolean,
+        default: true,
+    },
     commentaire: String,
     document: String,
+    createdAt: { type: Date, default: Date.now }
 });
 
 module.exports = new mongoose.model('User', userSchema);

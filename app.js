@@ -85,11 +85,13 @@ app.get("/connexion", function(req, res) {
 });
 
 app.get("/administrateur", function(req, res) {
-    // if(req.isAuthenticated()) {
-        res.render('Administrateur');
-    // } else {
-    //     res.redirect("connexion");
-    // }
+  User.find({postulant: true}, (err, foundUsers) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.render('Administrateur', {postulants: foundUsers});
+    }
+  })
 });
 
 app.get("/inscription", function(req, res) {
@@ -133,7 +135,7 @@ app.post('/submit', upload.single('cv'), (req, res) => {
 });
 
 app.post('/publish', upload.single('image'), (req, res) => {
-  res.send('publie avec success !!!');
+  res.send("sent");
 });
 
 app.listen(3000, function() {

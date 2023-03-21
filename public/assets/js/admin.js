@@ -1,6 +1,7 @@
 // Get all the side-items
 const sideItems = document.querySelectorAll('.side-item');
 const tabs = document.querySelectorAll('.tab');
+const submitBtn = document.querySelector(".submit-btn");
 
 // Loop through the side-items and add a click event listener to each one
 sideItems.forEach((link, index) => {
@@ -21,3 +22,20 @@ sideItems.forEach((link, index) => {
     tabs[index].classList.remove('d-none');
   });
 });
+
+submitBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  const form = document.querySelector('.offer-form');
+  const formData = new FormData(form);
+
+  const data = {
+    titre: formData.get('titre'),
+    description: formData.get('description'),
+    salaire: formData.get('salaire'),
+  }
+
+  fetch('/publish', {
+    method: 'POST',
+    body: formData
+  })
+})

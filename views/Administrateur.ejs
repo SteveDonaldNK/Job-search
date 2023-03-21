@@ -239,56 +239,22 @@
                   <button type="button" class="btn btn-default btn-sm">
                     <i class="fas fa-sync-alt"></i>
                   </button>
-                  <div class="float-right">
-                    1-50/200
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-default btn-sm">
-                        <i class="fas fa-chevron-left"></i>
-                      </button>
-                      <button type="button" class="btn btn-default btn-sm">
-                        <i class="fas fa-chevron-right"></i>
-                      </button>
-                    </div>
-                    <!-- /.btn-group -->
-                  </div>
-                  <!-- /.float-right -->
                 </div>
                 <div class="table-responsive mailbox-messages">
                   <table class="table table-hover table-striped">
                     <tbody>
-                    <tr>
-                      <td>
-                        <div class="icheck-primary">
-                          <input type="checkbox" value="" id="check13">
-                          <label for="check13"></label>
-                        </div>
-                      </td>
-                      <td class="mailbox-name"><a href="read-mail.html">Malla maurelle</a></td>
-                      <td class="mailbox-subject"><b><a class="text-primary" href="#">Telecharger le cv</a></b></td>
-                      <td class="mailbox-date pr-0">12 days ago</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="icheck-primary">
-                          <input type="checkbox" value="" id="check14">
-                          <label for="check14"></label>
-                        </div>
-                      </td>
-                      <td class="mailbox-name"><a href="read-mail.html">Malla maurelle</a></td>
-                      <td class="mailbox-subject"><b><a class="text-primary" href="#">Telecharger le cv</a></b></td>
-                      <td class="mailbox-date pr-0">14 days ago</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="icheck-primary">
-                          <input type="checkbox" value="" id="check15">
-                          <label for="check15"></label>
-                        </div>
-                      </td>
-                      <td class="mailbox-name"><a href="read-mail.html">Malla maurelle</a></td>
-                      <td class="mailbox-subject"><b><a class="text-primary" href="#">Telecharger le cv</a></b></td>
-                      <td class="mailbox-date pr-0">15 days ago</td>
-                    </tr>
+                      <% postulants.map(postulant => { %>
+                        <tr>
+                          <td>
+                            <div class="icheck-primary">
+                              <input type="checkbox" value="1">
+                            </div>
+                          </td>
+                          <td class="mailbox-name"><a href="read-mail.html"><%= postulant.nom %> <%= postulant.prenom %></a></td>
+                          <td class="mailbox-subject"><b><a class="text-primary" href="../uploads/<%= postulant.document %>" download="">Telecharger le cv</a></b></td>
+                          <td class="mailbox-date pr-0">12 days ago</td>
+                        </tr>
+                      <% }) %>
                     </tbody>
                   </table>
                   <!-- /.table -->
@@ -311,19 +277,6 @@
                   <button type="button" class="btn btn-default btn-sm">
                     <i class="fas fa-sync-alt"></i>
                   </button>
-                  <div class="float-right">
-                    1-50/200
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-default btn-sm">
-                        <i class="fas fa-chevron-left"></i>
-                      </button>
-                      <button type="button" class="btn btn-default btn-sm">
-                        <i class="fas fa-chevron-right"></i>
-                      </button>
-                    </div>
-                    <!-- /.btn-group -->
-                  </div>
-                  <!-- /.float-right -->
                 </div>
               </div>
             </div>
@@ -331,21 +284,19 @@
           </div>
 
           <div class="form-floating tab d-none">
-            <form action="">
+            <form class="offer-form">
               <label for="floatingInput">Intitule</label>
-              <input type="email" class="form-control mb-4" id="floatingInput" placeholder="Titre de l'offre">
+              <input name="titre" type="email" class="form-control mb-4" id="floatingInput" placeholder="Titre de l'offre">
               <label for="floatingTextarea">Description</label>
-              <textarea class="form-control mb-4" style="height: 30vh" placeholder="Description ici" id="floatingTextarea"></textarea>
+              <textarea name="description" class="form-control mb-4" style="height: 30vh" placeholder="Description ici" id="floatingTextarea"></textarea>
               <label for="formFile" class="form-label">Image</label>
               <input name="image" class="form-control mb-4" type="file" accept="image/*" id="formFile">
               <div class="d-flex align-items-end justify-content-between">
                 <div>
                   <label for="floatingInput">Salaire</label>
-                  <input type="email" class="form-control" id="floatingInput" style="width: 150px" placeholder="salaire">
+                  <input name="salaire" type="text" class="form-control" id="floatingInput" style="width: 150px" placeholder="salaire">
                 </div>
-                <div>
-                  <button class="btn btn-danger">Publier l'offre</button>
-                </div>
+                  <button type="submit" class="btn btn-danger submit-btn">Publier l'offre</button>
               </div>
             </form>
           </div>
