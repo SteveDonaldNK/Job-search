@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AdminLTE 3 | Validation Form</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- IonIcons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="/plugins/fontawesome-free/css/all.min.css">
+  <!-- jsGrid -->
+  <link rel="stylesheet" href="/plugins/jsgrid/jsgrid.min.css">
+  <link rel="stylesheet" href="/plugins/jsgrid/jsgrid-theme.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="../../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+
+</head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="/" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="/contact" class="nav-link">Contact</a>
+      </li>
+    </ul>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <!-- Navbar Search -->
+      <li class="nav-item">
+        <div class="navbar-search-block">
+          <form class="form-inline">
+            <div class="input-group input-group-sm">
+              <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+              <div class="input-group-append">
+                <button class="btn btn-navbar" type="submit">
+                  <i class="fas fa-search"></i>
+                </button>
+                <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </li>
+
+      <!-- Messages Dropdown Menu -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="far fa-comments"></i>
+          <span class="badge badge-danger navbar-badge">3</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <img src="./dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  Brad Diesel
+                  <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">Call me whenever you can...</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <img src="./dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  John Pierce
+                  <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">I got your message bro</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <img src="./dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  Nora Silvester
+                  <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">The subject goes here</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="index.html" class="brand-link">
+      <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">Job offer</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="../../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">Malla Maurelle</a>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-4">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+             
+          <li class="nav-item">
+            <a href="#" id="default-tab" class="nav-link  side-item active">
+              <i class="nav-icon fas fa-user-alt"></i>
+              <p>Postulants</p>
+            </a>
+          </li>
+          
+          <li class="nav-item">
+            <a href="#" id="publish-tab" class="nav-link  side-item">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>Publier une offre</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" id="" class="nav-link  side-item">
+              <i class="nav-icon fas fa-copy"></i>
+              <p>Mes offres</p>
+            </a>
+          </li>
+          <li class="nav-item mt-5">
+            <a href="/logout" id="" class="nav-link bg-danger side-item">
+              <i class="fas fa-sign-out-alt mr-2"></i>
+              <p>Deconnexion</p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+
+  </aside>
+
+  <div class="wrapper">
+  
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1><b><marquee behavior="text-danger" direction="right">bienvenu cher administrateur</marquee></b></h1>
+            </div>
+            <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item"><a href="#">accueil</a></li>
+                <li class="breadcrumb-item active">postulant</li>
+              </ol>
+            </div>
+          </div>
+        </div><!-- /.container-fluid -->
+      </section>
+  
+      <!-- Main content -->
+      <section class="content">
+          <div class="tab">
+            <div class="card card-primary card-outline">
+              <div class="card-header">
+                <h3 class="card-title">Postulants</h3>
+  
+                <div class="card-tools">
+                  <div class="input-group input-group-sm">
+                    <input type="text" class="form-control" placeholder="rechercher un postulant">
+                    <div class="input-group-append">
+                      <div class="btn btn-primary">
+                        <i class="fas fa-search"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /.card-tools -->
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body p-0">
+                <div class="mailbox-controls">
+                  <!-- Check all button -->
+                  <button type="button" class="btn btn-default btn-sm checkbox-toggle"><i class="far fa-square"></i>
+                  </button>
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-default btn-sm">
+                      <i class="far fa-trash-alt"></i>
+                    </button>
+                  </div>
+                  <!-- /.btn-group -->
+                  <button type="button" class="btn btn-default btn-sm">
+                    <i class="fas fa-sync-alt"></i>
+                  </button>
+                  <div class="float-right">
+                    1-50/200
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-default btn-sm">
+                        <i class="fas fa-chevron-left"></i>
+                      </button>
+                      <button type="button" class="btn btn-default btn-sm">
+                        <i class="fas fa-chevron-right"></i>
+                      </button>
+                    </div>
+                    <!-- /.btn-group -->
+                  </div>
+                  <!-- /.float-right -->
+                </div>
+                <div class="table-responsive mailbox-messages">
+                  <table class="table table-hover table-striped">
+                    <tbody>
+                    <tr>
+                      <td>
+                        <div class="icheck-primary">
+                          <input type="checkbox" value="" id="check13">
+                          <label for="check13"></label>
+                        </div>
+                      </td>
+                      <td class="mailbox-name"><a href="read-mail.html">Malla maurelle</a></td>
+                      <td class="mailbox-subject"><b><a class="text-primary" href="#">Telecharger le cv</a></b></td>
+                      <td class="mailbox-date pr-0">12 days ago</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="icheck-primary">
+                          <input type="checkbox" value="" id="check14">
+                          <label for="check14"></label>
+                        </div>
+                      </td>
+                      <td class="mailbox-name"><a href="read-mail.html">Malla maurelle</a></td>
+                      <td class="mailbox-subject"><b><a class="text-primary" href="#">Telecharger le cv</a></b></td>
+                      <td class="mailbox-date pr-0">14 days ago</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="icheck-primary">
+                          <input type="checkbox" value="" id="check15">
+                          <label for="check15"></label>
+                        </div>
+                      </td>
+                      <td class="mailbox-name"><a href="read-mail.html">Malla maurelle</a></td>
+                      <td class="mailbox-subject"><b><a class="text-primary" href="#">Telecharger le cv</a></b></td>
+                      <td class="mailbox-date pr-0">15 days ago</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                  <!-- /.table -->
+                </div>
+                <!-- /.mail-box-messages -->
+              </div>
+              <!-- /.card-body -->
+              <div class="card-footer p-0">
+                <div class="mailbox-controls">
+                  <!-- Check all button -->
+                  <button type="button" class="btn btn-default btn-sm checkbox-toggle">
+                    <i class="far fa-square"></i>
+                  </button>
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-default btn-sm">
+                      <i class="far fa-trash-alt"></i>
+                    </button>
+                  </div>
+                  <!-- /.btn-group -->
+                  <button type="button" class="btn btn-default btn-sm">
+                    <i class="fas fa-sync-alt"></i>
+                  </button>
+                  <div class="float-right">
+                    1-50/200
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-default btn-sm">
+                        <i class="fas fa-chevron-left"></i>
+                      </button>
+                      <button type="button" class="btn btn-default btn-sm">
+                        <i class="fas fa-chevron-right"></i>
+                      </button>
+                    </div>
+                    <!-- /.btn-group -->
+                  </div>
+                  <!-- /.float-right -->
+                </div>
+              </div>
+            </div>
+            <!-- /.card -->
+          </div>
+
+          <div class="form-floating tab d-none">
+            <form action="">
+              <label for="floatingInput">Intitule</label>
+              <input type="email" class="form-control mb-4" id="floatingInput" placeholder="Titre de l'offre">
+              <label for="floatingTextarea">Description</label>
+              <textarea class="form-control mb-4" style="height: 30vh" placeholder="Description ici" id="floatingTextarea"></textarea>
+              <label for="formFile" class="form-label">Image</label>
+              <input name="image" class="form-control mb-4" type="file" accept="image/*" id="formFile">
+              <div class="d-flex align-items-end justify-content-between">
+                <div>
+                  <label for="floatingInput">Salaire</label>
+                  <input type="email" class="form-control" id="floatingInput" style="width: 150px" placeholder="salaire">
+                </div>
+                <div>
+                  <button class="btn btn-danger">Publier l'offre</button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="tab d-none">
+            <div class="card card-primary card-outline">
+              <div class="card-header">
+                <h3 class="card-title">Emplois</h3>
+                <div class="card-tools">
+                  <div class="input-group input-group-sm">
+                    <input type="text" class="form-control" placeholder="rechercher un emploi">
+                    <div class="input-group-append">
+                      <div class="btn btn-primary">
+                        <i class="fas fa-search"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /.card-tools -->
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body p-0">
+                <div class="mailbox-controls">
+                  <!-- Check all button -->
+                  <button type="button" class="btn btn-default btn-sm checkbox-toggle"><i class="far fa-square"></i>
+                  </button>
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-default btn-sm">
+                      <i class="far fa-trash-alt"></i>
+                    </button>
+                  </div>
+                  <!-- /.btn-group -->
+                  <button type="button" class="btn btn-default btn-sm">
+                    <i class="fas fa-sync-alt"></i>
+                  </button>
+                  <div class="float-right">
+                    1-50/200
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-default btn-sm">
+                        <i class="fas fa-chevron-left"></i>
+                      </button>
+                      <button type="button" class="btn btn-default btn-sm">
+                        <i class="fas fa-chevron-right"></i>
+                      </button>
+                    </div>
+                    <!-- /.btn-group -->
+                  </div>
+                  <!-- /.float-right -->
+                </div>
+                <div class="table-responsive mailbox-messages">
+                  <table class="table table-hover table-striped">
+                    <tbody>
+                    <tr>
+                      <td>
+                        <div class="icheck-primary">
+                          <input type="checkbox" value="" id="check13">
+                          <label for="check13"></label>
+                        </div>
+                      </td>
+                      <td class="mailbox-name"><a href="read-mail.html">Malla maurelle</a></td>
+                      <td class="mailbox-subject"><b>offre d'emploi</b> - Trying to find a solution to this problem...
+                      </td>
+                      <td class="mailbox-date pr-0">12 days ago</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="icheck-primary">
+                          <input type="checkbox" value="" id="check14">
+                          <label for="check14"></label>
+                        </div>
+                      </td>
+                      <td class="mailbox-name"><a href="read-mail.html">Malla maurelle</a></td>
+                      <td class="mailbox-subject"><b>offre d'emploi</b> - Trying to find a solution to this problem...
+                      </td>
+                      <td class="mailbox-date pr-0">14 days ago</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="icheck-primary">
+                          <input type="checkbox" value="" id="check15">
+                          <label for="check15"></label>
+                        </div>
+                      </td>
+                      <td class="mailbox-name"><a href="read-mail.html">Malla maurelle</a></td>
+                      <td class="mailbox-subject"><b>offre d'emploi</b> - Trying to find a solution to this problem...
+                      </td>
+                      <td class="mailbox-date pr-0">15 days ago</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                  <!-- /.table -->
+                </div>
+                <!-- /.mail-box-messages -->
+              </div>
+              <!-- /.card-body -->
+              <div class="card-footer p-0">
+                <div class="mailbox-controls">
+                  <!-- Check all button -->
+                  <button type="button" class="btn btn-default btn-sm checkbox-toggle">
+                    <i class="far fa-square"></i>
+                  </button>
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-default btn-sm">
+                      <i class="far fa-trash-alt"></i>
+                    </button>
+                  </div>
+                  <!-- /.btn-group -->
+                  <button type="button" class="btn btn-default btn-sm">
+                    <i class="fas fa-sync-alt"></i>
+                  </button>
+                  <div class="float-right">
+                    1-50/200
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-default btn-sm">
+                        <i class="fas fa-chevron-left"></i>
+                      </button>
+                      <button type="button" class="btn btn-default btn-sm">
+                        <i class="fas fa-chevron-right"></i>
+                      </button>
+                    </div>
+                    <!-- /.btn-group -->
+                  </div>
+                  <!-- /.float-right -->
+                </div>
+              </div>
+            </div>
+            <!-- /.card -->
+          </div>
+      
+      </section>
+      <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+  </div>
+
+<!-- jQuery -->
+<script src="./assets/js/admin.js"></script>
+<script src="./plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="./plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- jquery-validation -->
+<script src="./plugins/jquery-validation/jquery.validate.min.js"></script>
+<script src="./plugins/jquery-validation/additional-methods.min.js"></script>
+<!-- AdminLTE App -->
+<script src="./dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="./dist/js/demo.js"></script>
+<!-- Page specific script -->
+<script>
+$(function () {
+  $.validator.setDefaults({
+    submitHandler: function () {
+      alert( "Form successful submitted!" );
+    }
+  });
+  $('#quickForm').validate({
+    rules: {
+      email: {
+        required: true,
+        email: true,
+      },
+      password: {
+        required: true,
+        minlength: 5
+      },
+      terms: {
+        required: true
+      },
+    },
+    messages: {
+      email: {
+        required: "Please enter a email address",
+        email: "Please enter a valid email address"
+      },
+      password: {
+        required: "Please provide a password",
+        minlength: "Your password must be at least 5 characters long"
+      },
+      terms: "Please accept our terms"
+    },
+    errorElement: 'span',
+    errorPlacement: function (error, element) {
+      error.addClass('invalid-feedback');
+      element.closest('.form-group').append(error);
+    },
+    highlight: function (element, errorClass, validClass) {
+      $(element).addClass('is-invalid');
+    },
+    unhighlight: function (element, errorClass, validClass) {
+      $(element).removeClass('is-invalid');
+    }
+  });
+});
+</script>
+</body>
+</html>
