@@ -12,17 +12,17 @@
   <!-- IonIcons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="dist/css/adminlte.css">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="/plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
   <!-- jsGrid -->
-  <link rel="stylesheet" href="/plugins/jsgrid/jsgrid.min.css">
-  <link rel="stylesheet" href="/plugins/jsgrid/jsgrid-theme.min.css">
+  <link rel="stylesheet" href="plugins/jsgrid/jsgrid.min.css">
+  <link rel="stylesheet" href="plugins/jsgrid/jsgrid-theme.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
-  <link rel="stylesheet" href="../../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
 
 </head>
 <body class="hold-transition sidebar-mini">
@@ -62,65 +62,6 @@
           </form>
         </div>
       </li>
-
-      <!-- Messages Dropdown Menu -->
-      <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="far fa-comments"></i>
-          <span class="badge badge-danger navbar-badge">3</span>
-        </a>
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <a href="#" class="dropdown-item">
-            <!-- Message Start -->
-            <div class="media">
-              <img src="./dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
-              <div class="media-body">
-                <h3 class="dropdown-item-title">
-                  Brad Diesel
-                  <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
-                </h3>
-                <p class="text-sm">Call me whenever you can...</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
-              </div>
-            </div>
-            <!-- Message End -->
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <!-- Message Start -->
-            <div class="media">
-              <img src="./dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
-              <div class="media-body">
-                <h3 class="dropdown-item-title">
-                  John Pierce
-                  <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
-                </h3>
-                <p class="text-sm">I got your message bro</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
-              </div>
-            </div>
-            <!-- Message End -->
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <!-- Message Start -->
-            <div class="media">
-              <img src="./dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
-              <div class="media-body">
-                <h3 class="dropdown-item-title">
-                  Nora Silvester
-                  <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
-                </h3>
-                <p class="text-sm">The subject goes here</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
-              </div>
-            </div>
-            <!-- Message End -->
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
-        </div>
-      </li>
     </ul>
   </nav>
   <!-- /.navbar -->
@@ -128,7 +69,7 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index.html" class="brand-link">
+    <a href="/" class="brand-link">
       <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">Job offer</span>
     </a>
@@ -171,7 +112,7 @@
             </a>
           </li>
           <li class="nav-item mt-5">
-            <a href="/logout" id="" class="nav-link bg-danger side-item">
+            <a href="/logout" id="" class="nav-link bg-danger">
               <i class="fas fa-sign-out-alt mr-2"></i>
               <p>Deconnexion</p>
             </a>
@@ -206,7 +147,7 @@
       </section>
   
       <!-- Main content -->
-      <section class="content">
+      <section class="content px-5 pb-5">
           <div class="tab">
             <div class="card card-primary card-outline">
               <div class="card-header">
@@ -230,11 +171,6 @@
                   <!-- Check all button -->
                   <button type="button" class="btn btn-default btn-sm checkbox-toggle"><i class="far fa-square"></i>
                   </button>
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-default btn-sm">
-                      <i class="far fa-trash-alt"></i>
-                    </button>
-                  </div>
                   <!-- /.btn-group -->
                   <button type="button" class="btn btn-default btn-sm">
                     <i class="fas fa-sync-alt"></i>
@@ -268,11 +204,6 @@
                   <button type="button" class="btn btn-default btn-sm checkbox-toggle">
                     <i class="far fa-square"></i>
                   </button>
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-default btn-sm">
-                      <i class="far fa-trash-alt"></i>
-                    </button>
-                  </div>
                   <!-- /.btn-group -->
                   <button type="button" class="btn btn-default btn-sm">
                     <i class="fas fa-sync-alt"></i>
@@ -285,18 +216,35 @@
 
           <div class="form-floating tab d-none">
             <form class="offer-form">
-              <label for="floatingInput">Intitule</label>
-              <input name="titre" type="email" class="form-control mb-4" id="floatingInput" placeholder="Titre de l'offre">
-              <label for="floatingTextarea">Description</label>
-              <textarea name="description" class="form-control mb-4" style="height: 30vh" placeholder="Description ici" id="floatingTextarea"></textarea>
-              <label for="formFile" class="form-label">Image</label>
-              <input name="image" class="form-control mb-4" type="file" accept="image/*" id="formFile">
+              <div class="toast-container">
+                <div class="toast shadow-sm p-3 rounded" >Hello, world!</div>
+              </div>
+              
+              <label for="title">Intitule *</label>
+              <input name="titre" type="email" class="form-control mb-4" id="title" placeholder="Titre de l'offre" required>
+              <label for="employer">Entreprise *</label>
+              <input name="entreprise" type="email" class="form-control mb-4" id="employer" placeholder="Nom de l'entreprise" required>
+              <select name="categorie" class="form-select mb-4" id="floatingSelect" aria-label="Floating label select example" required>
+                <option selected>Choisir une categorie *</option>
+                <option value="Informatique">Informatique</option>
+                <option value="Agriculture">Agriculture</option>
+                <option value="Elevage">Elevage</option>
+              </select>
+              <label for="web">Site web</label>
+              <input name="site" type="email" class="form-control mb-4" id="web" placeholder="Site web de l'entreprise" >
+              <label for="floatingTextarea">Description *</label>
+              <textarea name="description" class="form-control mb-4" style="height: 30vh" placeholder="Description ici" id="floatingTextarea" required></textarea>
+              <label for="formFile" class="form-label">Images (maximum 5)</label>
+              <input name="image" class="form-control mb-4" type="file" accept="image/*" id="formFile" multiple="5">
               <div class="d-flex align-items-end justify-content-between">
                 <div>
-                  <label for="floatingInput">Salaire</label>
-                  <input name="salaire" type="text" class="form-control" id="floatingInput" style="width: 150px" placeholder="salaire">
+                  <label for="salary">Salaire *</label>
+                  <input name="salaire" type="text" class="form-control" id="salary" style="width: 150px" placeholder="salaire" required>
                 </div>
-                  <button type="submit" class="btn btn-danger submit-btn">Publier l'offre</button>
+                <div>
+                  <button type="reset" class="btn btn-outline-danger me-4">Reinitialiser</button>
+                  <button type="submit" class="btn btn-primary submit-btn">Publier l'offre</button>
+                </div>
               </div>
             </form>
           </div>
@@ -331,60 +279,24 @@
                   <!-- /.btn-group -->
                   <button type="button" class="btn btn-default btn-sm">
                     <i class="fas fa-sync-alt"></i>
-                  </button>
-                  <div class="float-right">
-                    1-50/200
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-default btn-sm">
-                        <i class="fas fa-chevron-left"></i>
-                      </button>
-                      <button type="button" class="btn btn-default btn-sm">
-                        <i class="fas fa-chevron-right"></i>
-                      </button>
-                    </div>
-                    <!-- /.btn-group -->
-                  </div>
+                  </button> 
                   <!-- /.float-right -->
                 </div>
                 <div class="table-responsive mailbox-messages">
                   <table class="table table-hover table-striped">
                     <tbody>
-                    <tr>
+                    <% offres.map(offre => { %>
+                      <tr>
                       <td>
                         <div class="icheck-primary">
-                          <input type="checkbox" value="" id="check13">
-                          <label for="check13"></label>
+                          <input type="checkbox" value="">
                         </div>
                       </td>
-                      <td class="mailbox-name"><a href="read-mail.html">Malla maurelle</a></td>
-                      <td class="mailbox-subject"><b>offre d'emploi</b> - Trying to find a solution to this problem...
-                      </td>
-                      <td class="mailbox-date pr-0">12 days ago</td>
+                      <td class="mailbox-name"><a href="/emplois/<%= offre._id %>"><%= offre.titre.substr(0, 30) %></a></td>
+                      <td class="mailbox-subject"><b class="text-primary"><%= offre.description.substr(0, 40) + "..." %></b></td>
+                      <td class="mailbox-date pr-0">Il y'a 12 days ago</td>
                     </tr>
-                    <tr>
-                      <td>
-                        <div class="icheck-primary">
-                          <input type="checkbox" value="" id="check14">
-                          <label for="check14"></label>
-                        </div>
-                      </td>
-                      <td class="mailbox-name"><a href="read-mail.html">Malla maurelle</a></td>
-                      <td class="mailbox-subject"><b>offre d'emploi</b> - Trying to find a solution to this problem...
-                      </td>
-                      <td class="mailbox-date pr-0">14 days ago</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="icheck-primary">
-                          <input type="checkbox" value="" id="check15">
-                          <label for="check15"></label>
-                        </div>
-                      </td>
-                      <td class="mailbox-name"><a href="read-mail.html">Malla maurelle</a></td>
-                      <td class="mailbox-subject"><b>offre d'emploi</b> - Trying to find a solution to this problem...
-                      </td>
-                      <td class="mailbox-date pr-0">15 days ago</td>
-                    </tr>
+                    <% }) %>
                     </tbody>
                   </table>
                   <!-- /.table -->
@@ -407,18 +319,6 @@
                   <button type="button" class="btn btn-default btn-sm">
                     <i class="fas fa-sync-alt"></i>
                   </button>
-                  <div class="float-right">
-                    1-50/200
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-default btn-sm">
-                        <i class="fas fa-chevron-left"></i>
-                      </button>
-                      <button type="button" class="btn btn-default btn-sm">
-                        <i class="fas fa-chevron-right"></i>
-                      </button>
-                    </div>
-                    <!-- /.btn-group -->
-                  </div>
                   <!-- /.float-right -->
                 </div>
               </div>
@@ -433,17 +333,17 @@
   </div>
 
 <!-- jQuery -->
-<script src="./assets/js/admin.js"></script>
-<script src="./plugins/jquery/jquery.min.js"></script>
+<script src="assets/js/admin.js"></script>
+<script src="plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
-<script src="./plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- jquery-validation -->
-<script src="./plugins/jquery-validation/jquery.validate.min.js"></script>
-<script src="./plugins/jquery-validation/additional-methods.min.js"></script>
+<script src="plugins/jquery-validation/jquery.validate.min.js"></script>
+<script src="plugins/jquery-validation/additional-methods.min.js"></script>
 <!-- AdminLTE App -->
-<script src="./dist/js/adminlte.min.js"></script>
+<script src="dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="./dist/js/demo.js"></script>
+<script src="dist/js/demo.js"></script>
 <!-- Page specific script -->
 <script>
 $(function () {

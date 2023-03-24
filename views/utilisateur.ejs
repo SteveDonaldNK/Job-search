@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="./plugins/fontawesome-free/css/all.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="./dist/css/adminlte.css">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -50,64 +51,6 @@
         </div>
       </li>
 
-      <!-- Messages Dropdown Menu -->
-      <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="far fa-comments"></i>
-          <span class="badge badge-danger navbar-badge">3</span>
-        </a>
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <a href="#" class="dropdown-item">
-            <!-- Message Start -->
-            <div class="media">
-              <img src="./dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
-              <div class="media-body">
-                <h3 class="dropdown-item-title">
-                  Brad Diesel
-                  <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
-                </h3>
-                <p class="text-sm">Call me whenever you can...</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
-              </div>
-            </div>
-            <!-- Message End -->
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <!-- Message Start -->
-            <div class="media">
-              <img src="./dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
-              <div class="media-body">
-                <h3 class="dropdown-item-title">
-                  John Pierce
-                  <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
-                </h3>
-                <p class="text-sm">I got your message bro</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
-              </div>
-            </div>
-            <!-- Message End -->
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <!-- Message Start -->
-            <div class="media">
-              <img src="./dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
-              <div class="media-body">
-                <h3 class="dropdown-item-title">
-                  Nora Silvester
-                  <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
-                </h3>
-                <p class="text-sm">The subject goes here</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
-              </div>
-            </div>
-            <!-- Message End -->
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
-        </div>
-      </li>
     </ul>
   </nav>
   <!-- /.navbar -->
@@ -117,7 +60,7 @@
     <!-- Brand Logo -->
     <a href="/" class="brand-link">
       <img src="./dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">Administrateur</span>
+      <span class="brand-text font-weight-light">Job offer</span>
     </a>
 
     <!-- Sidebar -->
@@ -128,19 +71,7 @@
           <img src="./dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
-        </div>
-      </div>
-
-      <!-- SidebarSearch Form -->
-      <div class="form-inline">
-        <div class="input-group" data-widget="sidebar-search">
-          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
-          <div class="input-group-append">
-            <button class="btn btn-sidebar">
-              <i class="fas fa-search fa-fw"></i>
-            </button>
-          </div>
+          <a href="#" class="d-block"><%= username %></a>
         </div>
       </div>
 
@@ -150,72 +81,28 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+            <a href="#" class="nav-link active side-item">
+              <i class="nav-icon fas fa-cog"></i>
               <p>
-                Dashboard
-                <i class="right fas fa-angle-left"></i>
+                Mon compte
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="./index.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v1</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="./index2.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v2</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="./index3.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v3</p>
-                </a>
-              </li>
-            </ul>
           </li>
-          <li class="nav-item">
-            <a href="../widgets.html" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+          <li class="nav-item mt-2">
+            <a href="#" class="nav-link side-item">
+              <i class="nav-icon fas fa-user-alt"></i>
               <p>
-                Widgets
-                <span class="right badge badge-danger">New</span>
+                Profilage
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
+            <a href="/logout" class="nav-link bg-danger mt-5">
+              <i class="fas fa-sign-out-alt mr-2"></i>
               <p>
-                Layout Options
-                <i class="fas fa-angle-left right"></i>
-                <span class="badge badge-info right">6</span>
+                Deconnexion
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="../layout/top-nav.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Top Navigation</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="../layout/top-nav-sidebar.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Top Navigation + Sidebar</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="../layout/boxed.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Boxed</p>
-                </a>
-              </li>
-            </ul>
           </li>
         </ul>
       </nav>
@@ -250,32 +137,111 @@
           <!-- left column -->
           <div class="col-md-12">
             <!-- jquery validation -->
-            <div class="card card-primary">
+            <div class="card card-primary tab">
               <div class="card-header">
-                <h3 class="card-title">Quick Example <small>jQuery Validation</small></h3>
+                <h3 class="card-title">Mon compte</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form id="quickForm">
+              <form id="profileForm">
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    <label for="exampleInputEmail1">Changer d'adresse mail</label>
+                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="votre email">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                  </div>
-                  <div class="form-group mb-0">
-                    <div class="custom-control custom-checkbox">
-                      <input type="checkbox" name="terms" class="custom-control-input" id="exampleCheck1">
-                      <label class="custom-control-label" for="exampleCheck1">I agree to the <a href="/terms">terms of service</a>.</label>
+                    <label for="exampleInputPassword1">Changer le mot de passe</label>
+                    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="votre mot de passe">
+                    <div class="toast-container">
+                      <div class="toast profToast shadow-sm p-3 rounded" >Hello, world!</div>
                     </div>
                   </div>
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary profBtn">Submit</button>
+                </div>
+              </form>
+            </div>
+
+            <div class="card card-primary d-none tab">
+              <div class="card-header">
+                <h3 class="card-title">Profilage</h3>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
+              <form id="candidateForm">
+                <div class="card-body">
+                    <div class="mb-3">
+                      <label for="formGroupExampleInput" class="form-label">Nom </label>
+                      <input name="nom" type="text" class="form-control" id="entrer votre nom " placeholder="Entrer votre nom ">
+                    </div>
+                    <div class="mb-3">
+                      <label for="formGroupExampleInput" class="form-label">Prénom </label>
+                      <input name="prenom" type="text" class="form-control" id="entrer votre prénom " placeholder="Entrer votre Prénom ">
+                    </div>
+                  
+                    <div class="mb-3">
+                      <label for="formGroupExampleInput2" class="Métier">Votre Secteur d'activité</label>
+                      <div class="form-check">
+                        <input value="Informatique" class="form-check-input" type="radio" name="Secteur" id="flexRadioDefault4">
+                        <label class="form-check-label" for="flexRadioDefault4">
+                          Informatique
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input value="Elevage" class="form-check-input" type="radio" name="Secteur" id="flexRadioDefault3">
+                        <label class="form-check-label" for="flexRadioDefault3">
+                          Elevage
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input value="Agriculture" class="form-check-input" type="radio" name="Secteur" id="flexRadioDefault2" >
+                        <label class="form-check-label" for="flexRadioDefault2">
+                          Agriculture
+                        </label>
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="formGroupExampleInput" class="form-label">Date de naissance</label>
+                      <input name="anniv" type="date" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                      <label for="formGroupExampleInput2" class="form-label">Téléphone</label>
+                      <input name="tel" type="text" class="form-control" id="Entrer votre numéro de téléphone" placeholder="Entrer votre numéro de téléphone">
+                    </div>
+                    <div class="mb-3">
+                      <label for="formGroupExampleInput" class="form-label">Adresse</label>
+                      <input name="adresse" type="text" class="form-control" id="Entrer votre Adresse" placeholder="Entrer votre Adresse">
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleFormControlInput1" class="form-label">Email</label>
+                      <input name="email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="nom@exemple.com">
+                    </div>
+                    <div class="form-check">
+                      <input name="freelance" class="form-check-input" type="checkbox" value="1" id="flexCheckDefault">
+                      <label class="form-check-label" for="flexCheckDefault">
+                       Freelance
+                      </label>
+                    </div>
+                  
+                    <div class="mb-3">
+                      <label for="exampleFormControlTextarea1" class="form-label">Commentaire</label>
+                      <textarea name="commentaire" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <div class="mb-3">
+                      <label for="formFile" class="form-label">Votre CV</label>
+                      <input name="cv" class="form-control" type="file" id="formFile" accept="application/pdf">
+                      <div class="toast-container">
+                        <div class="toast candToast shadow-sm p-3 rounded" >Hello, world!</div>
+                      </div>
+                    </div>
+                  
+                    <input type="checkbox" class="btn-check" id="btn-check-2" checked autocomplete="off">
+                </div>
+                <!-- /.card-body -->
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary candBtn">Soumettre</button>
                 </div>
               </form>
             </div>
@@ -317,6 +283,7 @@
 <script src="./dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="./dist/js/demo.js"></script>
+<script src="/assets/js/user.js"></script>
 <!-- Page specific script -->
 <script>
 $(function () {

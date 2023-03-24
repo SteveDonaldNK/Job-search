@@ -1,7 +1,33 @@
 // Get all the side-items
 const sideItems = document.querySelectorAll('.side-item');
 const tabs = document.querySelectorAll('.tab');
-const submitBtn = document.querySelector(".submit-btn");
+const fileInput = document.getElementById('formFile');
+const searchResults = document.querySelector("#searchResults");
+
+function showToast(message, error) {
+  const toast = document.querySelector('.toast');
+  if (toast) {
+    if(error === 200) { 
+      toast.className = 'toast shadow-sm p-3 rounded bg-success';
+    } else if (error === 400) {
+      toast.className = 'toast shadow-sm p-3 rounded bg-warning';
+    } else {
+      toast.className = 'toast shadow-sm p-3 rounded bg-danger';
+    }
+    toast.textContent = message;
+    toast.classList.add('show');
+    setTimeout(() => {
+      toast.classList.remove('show');
+    }, 3000); // hide the toast after 3 seconds
+  }
+}
+
+  fileInput.addEventListener('change', () => {
+    if (fileInput.files.length > 5) {
+      showToast('Vous pouvez choisir un maximum de 5 photos', 400);
+      fileInput.value = ''; // Clear the selected files
+    }
+  });
 
 // Loop through the side-items and add a click event listener to each one
 sideItems.forEach((link, index) => {
@@ -23,19 +49,28 @@ sideItems.forEach((link, index) => {
   });
 });
 
-submitBtn.addEventListener('click', (e) => {
-  e.preventDefault();
-  const form = document.querySelector('.offer-form');
-  const formData = new FormData(form);
-
-  const data = {
-    titre: formData.get('titre'),
-    description: formData.get('description'),
-    salaire: formData.get('salaire'),
+function searchFunction() {
+  let searchInput = document.getElementById("searchInput");
+  let searchQuery = searchInput.value.trim();
+  if (searchQuery === "") {
+    // if the search query is empty, hide all items
+    searchResults.innerHTML = "";
+    return;
   }
-
-  fetch('/publish', {
-    method: 'POST',
-    body: formData
-  })
-})
+  fetch(`/search?q=${searchQuery}`)
+    .then(response => response.json())
+    .then(data => {
+      searchResults.innerHTML = "";
+      data.forEach(item => {
+        let itemElement = document.createElement("div");
+        itemElement.innerHTML = `<div class='d-flex py-4 px-2'><img style="height: 5rem; width: 100%; object-fit: cover;" class='w-25 me-2' src='/image/${item.image[0]}'>
+                                    <div>
+                                      <h5><a href='/emplois/${item._id}'>${item.titre.substr(0, 30)}</a></h5>
+                                      <p>${item.description.substr(0, 50) + '...'}</p>
+                                    </div>
+                                  </div>`;
+        searchResults.appendChild(itemElement);
+      });
+    })
+    .catch(error => console.error(error));
+}

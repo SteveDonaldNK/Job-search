@@ -66,13 +66,13 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="active" href="/">Acceuil</a></li>
+          <li><a href="/">Acceuil</a></li>
           <li><a href="/about">A propos</a></li>
           <li><a href="/services">Services</a></li>
           <li><a href="/testimonials">Témoignage</a></li>
-          <li><a href="/pricing">Profilage</a></li>
-          <li><a href="/portfolio">Portfolio</a></li>
-          <li><a href="/blog">Profil</a></li>
+          <li><a class="active" href="/portfolio">Categories</a></li>
+          <li><a href="/blog">Emplois</a></li>
+          <li><a href="/account">Profil</a></li>
           <li class="dropdown"><a href="#"><span>Menu déroulant</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">Menu déroulant 1</a></li>
@@ -105,10 +105,10 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Portolio</h2>
+          <h2>Offres d'emploi</h2>
           <ol>
             <li><a href="index.html">Acceuil</a></li>
-            <li>Portolio</li>
+            <li>Emplois</li>
           </ol>
         </div>
 
@@ -119,108 +119,29 @@
     <section id="portfolio" class="portfolio">
       <div class="container">
 
-        <div class="row" data-aos="fade-up">
+        <div style="" class="row" data-aos="fade-up">
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">Tout</li>
-              <li data-filter=".filter-app">Informatique</li>
-              <li data-filter=".filter-card">Elevage</li>
-              <li data-filter=".filter-web">Agriculture</li>
+              <li data-filter=".Informatique">Informatique</li>
+              <li data-filter=".Elevage">Elevage</li>
+              <li data-filter=".Agriculture">Agriculture</li>
             </ul>
           </div>
         </div>
 
         <div class="row portfolio-container" data-aos="fade-up">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="assets/img/portfolio/info1.jpg" class="img-fluid" alt="">
+          <% foundJobs.map(job => { %>
+          <div class="col-lg-4 col-md-6 portfolio-item <%= job.categorie %>">
+            <img src="image/<%= job.image[0] %>" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Informatique</h4>
-              <p>web</p>
-              <a href="assets/img/portfolio/info1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <h4><%= job.titre.substr(0, 30) + "..." %></h4>
+              <p><%= job.categorie %></p>
+              <a href="/assets/img/portfolio/info1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+              <a href="/emplois/<%= job._id %>" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/agri1.jpeg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Agriculture</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/agri1.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="assets/img/portfolio/topo1.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Topologie</h4>
-              <p>1</p>
-              <a href="assets/img/portfolio/topo1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="assets/img/portfolio/ele1.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Elevage</h4>
-              <p>1</p>
-              <a href="assets/img/portfolio/ele1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/agri1.jpeg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Agriculture</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/agri1.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="assets/img/portfolio/info1.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>informatique</h4>
-              <p>web</p>
-              <a href="assets/img/portfolio/info1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="assets/img/portfolio/ele1.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Elevage</h4>
-              <p>2</p>
-              <a href="assets/img/portfolio/ele1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="assets/img/portfolio/agri1.jpeg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Agriculture</h4>
-              <p>web</p>
-              <a href="assets/img/portfolio/agri1.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/meca1.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Mecanique</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/meca1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
+          <% }) %>
 
         </div>
 

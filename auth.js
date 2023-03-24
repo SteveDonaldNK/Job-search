@@ -4,18 +4,18 @@ module.exports = function (app, passport, User, bcrypt) {
         User.findOne({username: req.body.username}, async (err, foundUser) => {
             if (err) {
                console.log(err)
-               res.status("unknown error"); 
             } else if (foundUser){
-                res.send("l'utilisateur a un compte")
+                res.redirect("connexion")
             } else {
                     const hashedPassword = await bcrypt.hash(req.body.password, 10);
                     const newUser = new User({
                     username: req.body.username,
                     email: req.body.email,
-                    password: hashedPassword
+                    password: hashedPassword,
+                    timestamps: true
                 })
                 newUser.save();
-                res.send("Utilisateur créé")
+                res.redirect('/connexion')
             }
         })
         
@@ -23,13 +23,14 @@ module.exports = function (app, passport, User, bcrypt) {
 
     app.post('/login',
     passport.authenticate("local", { 
-        successRedirect: '/administrateur',
         failureRedirect: '/connexion',
         failureFlash: true })
-    );
+    , (req, res) => {
+        res.redirect('/utilisateur');
+    });
 
     app.get("/failed", function(req, res) {
-        res.render("connexion", {error: "wrong credentials"})
+        res.render("connexion")
     })
 
     app.get("/logout", function(req, res) {
@@ -37,7 +38,7 @@ module.exports = function (app, passport, User, bcrypt) {
             if (err) {
                 console.log(err);
             } else {
-                res.redirect("/");
+                res.redirect("/connexion");
             }
         });
     });

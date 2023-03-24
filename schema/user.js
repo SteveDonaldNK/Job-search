@@ -10,13 +10,17 @@ const userSchema = new mongoose.Schema({
     secteur: String,
     anniv: String,
     addresse: String,
+    admin: {
+        type: Boolean,
+        default: false,
+    },
     freelance: {
         type: Boolean,
         default: false,
     },
     postulant: {
         type: Boolean,
-        default: true,
+        default: false,
     },
     commentaire: String,
     document: String,

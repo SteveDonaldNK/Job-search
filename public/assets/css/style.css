@@ -797,6 +797,10 @@ section {
   object-fit: cover !important;
 }
 
+#searchResults {
+  z-index: 1000;
+}
+
 .portfolio .portfolio-item .portfolio-info {
   opacity: 0;
   position: absolute;

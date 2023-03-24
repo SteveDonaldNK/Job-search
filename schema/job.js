@@ -2,9 +2,12 @@ const mongoose = require('mongoose');
 
 const jobSchema = new mongoose.Schema({
     titre: String,
+    entreprise: String,
+    categorie: String,
+    site: String,
     description: String,
     salaire: String,
-    image: String,
+    image: Array,
     createdAt: { type: Date, default: Date.now }
 });
 

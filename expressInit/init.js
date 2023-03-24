@@ -1,5 +1,5 @@
 module.exports = function (app, express, session, flash) {
-    app.use(express.static("public"));
+    app.use(express.static('public'));
     app.use(express.urlencoded({
     extended: true
     }));
